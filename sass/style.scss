@@ -1,0 +1,61 @@
+#weatherWrapper{
+    background: linear-gradient(#ADD8E6, #fff);
+    .header{
+        background-color: #26a69a;
+        .input-field{
+            margin-top: 30px;
+            background-color: rgba(0,0,0,0.15);
+            .prefix{
+                color: #fff;
+                margin-top: 10px;
+            }
+        }
+        .mainTitle{
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .mainText{
+            font-weight: bold;
+            text-shadow: 2px 2px #fff;
+        }
+        /* label color */
+        .input-field label {
+            color: #fff;
+        }
+        /* label focus color */
+        .input-field input[type=text]:focus + label {
+            color: #fff;
+        }
+        /* label underline focus color */
+        .input-field input[type=text]:focus {
+            border-bottom: 1px solid #fff;
+            box-shadow: 0 1px 0 0 #fff;
+        }
+        /* valid color */
+        .input-field input[type=text].valid {
+            border-bottom: 1px solid #fff;
+            box-shadow: 0 1px 0 0 #fff;
+        }
+        /* invalid color */
+        .input-field input[type=text].invalid {
+            border-bottom: 1px solid #fff;
+            box-shadow: 0 1px 0 0 #fff;
+        }
+        /* icon prefix focus color */
+        .input-field .prefix.active {
+            color: #fff;
+        }
+    }
+    .tempText{
+        font-size: 50px;
+    }
+    .citiesWrapper{
+        margin-top: 20px;
+    }
+    .forecast{
+        .forecastHeader{
+            background: url(../img/clouds-background-1801.jpg);
+            color: #fff;
+        }
+    }
+}

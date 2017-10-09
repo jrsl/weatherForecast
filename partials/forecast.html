@@ -1,0 +1,34 @@
+<section class="forecast">
+    <div class="row forecastHeader">
+        <div class="col s12">
+            <div class="row container">
+                <a class="waves-effect waves-light btn" href="/"><i class="material-icons left">arrow_back</i>back to home</a>
+                <h2>{{forecast.cityName}} - Forecast:</h2>
+                <p class="flow-text mainText">Prepare yourself for the upcoming weather:</p>
+            </div>
+        </div>
+    </div>
+    <div class="row container">
+        <div class="col s6 m4 l2" ng-repeat="city in forecast.forecastList | limitTo: 12 ">
+            <div class="card blue-grey darken-1 hoverable">
+                <div class="card-content white-text">
+                    <p>{{city.dt_txt | date}}</p>
+                    <p class="flow-text">{{city.weather[0].main}}</p>
+                    <p><img ng-src="http://openweathermap.org/img/w/{{city.weather[0].icon}}.png" alt=""></p>
+                    <p class="tempText">{{ (city.main.temp).toFixed(0) }}c</p>
+                    <div class="row">
+                        <div class="col s12">
+                            <p class="valign-wrapper"><i class="material-icons left red-text">arrow_upward</i>{{city.main.temp_max}}c</p>
+                            <p class="valign-wrapper"><i class="material-icons left blue-text">arrow_downward</i>{{city.main.temp_min}}c</p>
+                        </div>
+                        <div class="col s12">
+                            <p>Wind:</p>
+                            <p>{{city.wind.speed}}km/h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="waves-effect waves-light btn" href="/"><i class="material-icons left">arrow_back</i>back to home</a>
+    </div>
+</section>
